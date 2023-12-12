@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="gradientBody" onload="onGradientBodyLoad()">
+    <h1> Background Generator</h1>
+
+    <div id="colorContainer">
+        <input type="color" name="topColor" id="topColor" value="#0000ff">
+        <input type="color" name="leftColor" id="leftColor" value="#000000">
+        <input type="color" name="rightColor" id="rightColor" value="#ff0000">
+        <input type="color" name="bottomColor" id="bottomColor" value="#800080">
+    </div>
+
+    <br>
+    <div id="optionsContainer">
+        <span id="toRightWrapper">
+            <input type="radio" name="flowOption" id="toRight" value="toRight" onclick="onFlowOptionClick(this.value)">
+            <label for="toRight"> To Right</label>
+        </span>
+        <span id="toBottomWrapper">
+            <input type="radio" name="flowOption" id="toBottom" value="toBottom" onclick="onFlowOptionClick(this.value)">
+            <label for="toBottom"> To Bottom</label>
+        </span>
+    </div>
+
+    <br>
+
+    <h3>Current CSS Background</h3>
+    <h4 id="currentBackgroundValueDisplay"></h4>
+
+    <button id="btnRandomize" onclick="onRandomizeClick(this)" ></button>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
